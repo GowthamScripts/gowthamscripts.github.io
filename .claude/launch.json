@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    },
+    {
+      "name": "portfolio-prod",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "npm run build && python3 -m http.server ${PORT:-3000} -d out"],
+      "port": 3000
+    }
+  ]
+}

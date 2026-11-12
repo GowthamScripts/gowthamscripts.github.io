@@ -1,0 +1,255 @@
+---
+# Real projects, written without internal figures or confidential detail.
+title: Enterprise Commerce Platforms
+subtitle: Commerce platforms for fashion, retail, digital content and multi-vendor marketplaces, each shaped to its industry but built on the same core of catalog, ordering, payments and administration.
+company: Several clients, including Finemart
+role: Software Engineer, later Senior Software Engineer
+timeline: Several projects
+team: Engineers, QA and business analysts
+domain: E-commerce, retail, digital content and marketplaces
+pillars: [domain, architecture, business]
+heroMetric:
+  label: Commerce domains
+  display: 4 domains
+  context: Fashion and apparel, retail, digital content and multi-vendor marketplaces
+tldr:
+  problem: Businesses in very different industries needed to sell online, from clothing and groceries to premium video and multi-vendor catalogs, and each needed ordering, payments and administration that matched how it actually trades.
+  action: As a Software Engineer and later Senior Software Engineer, I built Laravel backends, REST APIs and MySQL databases, implemented product, order, inventory and payment workflows, and supported the platforms in production.
+  result: Commerce platforms that digitized sales and operations for several businesses, sharing a common core while adapting to each industry's products and customers.
+results:
+  - category: business
+    label: Commerce operations
+    before: —
+    after: Catalog, orders, payments and administration in one platform per business
+    change: Digitized
+  - category: business
+    label: Industries supported
+    before: —
+    after: Fashion, retail, digital content and marketplaces
+    change: One core, adapted per industry
+  - category: business
+    label: Inventory and orders
+    before: —
+    after: Managed through the platform, from checkout to returns and refunds
+    change: Streamlined
+  - category: technical
+    label: Payments
+    before: —
+    after: Payment gateway integration with coupons, discounts and promotions
+    change: Secure online payments
+technologies:
+  - group: Backend
+    items: [Laravel, PHP]
+  - group: Frontend
+    items: [Blade, JavaScript, jQuery, Bootstrap]
+  - group: Database
+    items: [MySQL]
+  - group: Architecture
+    items: [MVC, REST APIs, Role-based access control, Modular application design]
+takeaways:
+  - title: Commerce domain depth
+    description: Worked on catalog, inventory, ordering, payments and returns across fashion, retail, digital content and marketplaces.
+  - title: Reusable core, industry fit
+    description: Built on a common set of commerce capabilities and adapted them to each business instead of starting again.
+  - title: Transactional correctness
+    description: Treated orders, stock and payments as data that must stay consistent through every step of checkout and fulfilment.
+  - title: Performance under load
+    description: Optimized queries, search and data access as catalogs and order volumes grew.
+  - title: Production engineering
+    description: Supported live stores, resolved production issues and kept checkout working.
+  - title: Collaboration
+    description: Worked with QA and business analysts to turn each business's way of trading into reliable software.
+date: "2026-11"
+order: 6
+---
+
+## Overview
+
+As a Software Engineer and later a Senior Software Engineer, I worked on several enterprise commerce platforms, including Finemart, for businesses in different industries.
+
+None of them was a simple online shop. Each one ran a business's digital commerce end to end: products and inventory, the customer's shopping experience, checkout and payments, orders through to returns and refunds, content, and the administration and reporting behind it all. They were built to handle large catalogs and high volumes of online transactions.
+
+## Different industries, a common core
+
+The platforms served different kinds of businesses:
+
+| Domain              | What was sold                                                    |
+| ------------------- | ---------------------------------------------------------------- |
+| Fashion and apparel | Clothing, shoes and accessories                                  |
+| Retail              | Grocery, household items and consumer products                   |
+| Digital commerce    | Streaming video products, premium digital content, subscriptions |
+| Marketplace         | Products from multiple vendors, each with their own catalog      |
+
+Each industry works differently. Fashion depends on variants such as size and colour. Grocery and household retail depend on accurate stock. Digital commerce sells access rather than physical goods. A marketplace has to manage vendors as well as customers.
+
+So the platforms were not identical. They shared a common set of commerce capabilities and were customized for each business's products, customers and way of trading.
+
+## What the platforms cover
+
+### Customers
+
+Registration and authentication, user profiles and saved addresses.
+
+### Catalog
+
+Products, categories, brands, variants and inventory. In the marketplace, vendor management and vendor product catalogs.
+
+### Shopping experience
+
+Search and filtering, wishlists, the cart, product reviews and recommendations.
+
+### Orders
+
+Checkout, order management and tracking, returns and refunds.
+
+### Payments and promotions
+
+Payment gateway integration for secure transactions, with discounts, coupons and promotions.
+
+### Content
+
+Product images, rich media and marketing content. One of the platforms also sold premium video: customers bought a subscription or individual content and streamed it securely through the platform.
+
+### Administration
+
+Dashboards, reporting and sales analytics, inventory management and customer support tools.
+
+## My role
+
+I was a hands-on engineer on these projects:
+
+- **Backend:** developed Laravel applications and the backend business logic.
+- **APIs:** built REST APIs.
+- **Data:** designed MySQL databases.
+- **Security:** implemented authentication and role-based authorization.
+- **Payments:** integrated payment gateways.
+- **Commerce workflows:** built product management, order workflows and inventory management.
+- **Performance:** optimized application and database performance.
+- **Production:** resolved production issues.
+- **Quality and collaboration:** took part in code reviews and worked with QA and business analysts.
+
+## Architecture
+
+The platforms are Laravel applications built on MVC and organized into modules by business area, such as catalog, orders, payments and administration. Blade, JavaScript, jQuery and Bootstrap power the web interfaces, REST APIs expose the business logic, and MySQL holds the data. Role-based access control separates what customers, vendors and administrators can do.
+
+<ArchitectureDiagram
+  title="Shared pattern of the commerce platforms"
+  layers={[
+    {
+      label: "Who uses it",
+      blocks: [
+        { name: "Customers", kind: "users", items: ["Shoppers", "Subscribers"] },
+        {
+          name: "The business",
+          kind: "users",
+          items: ["Administrators", "Staff", "Vendors (marketplace)"],
+        },
+      ],
+    },
+    {
+      label: "Web",
+      blocks: [
+        {
+          name: "Storefront",
+          kind: "web",
+          tech: "Blade · JavaScript · jQuery · Bootstrap",
+          items: [
+            "Search and filters",
+            "Wishlist",
+            "Cart",
+            "Checkout",
+            "Reviews",
+            "Order tracking",
+          ],
+        },
+        {
+          name: "Administration",
+          kind: "web",
+          tech: "Blade · JavaScript · jQuery · Bootstrap",
+          items: ["Dashboard", "Reports and sales analytics", "Inventory", "Customer support"],
+        },
+      ],
+      link: "REST APIs · authentication · role-based access control",
+    },
+    {
+      label: "Application (Laravel, organized by business module)",
+      blocks: [
+        {
+          name: "Commerce core",
+          kind: "app",
+          tech: "Shared across the platforms",
+          items: [
+            "Customers and addresses",
+            "Catalog and variants",
+            "Inventory",
+            "Cart and checkout",
+            "Orders, returns and refunds",
+            "Payments",
+            "Discounts, coupons and promotions",
+            "Content and media",
+          ],
+        },
+        {
+          name: "Industry-specific",
+          kind: "app",
+          tech: "Added per platform",
+          items: [
+            "Variants for fashion",
+            "Stock-heavy retail",
+            "Subscriptions and video streaming",
+            "Vendor management",
+          ],
+        },
+      ],
+    },
+    {
+      label: "Data and external services",
+      blocks: [
+        { name: "MySQL", kind: "data", tech: "Catalog, customers, orders and payments" },
+        { name: "Payment gateways", kind: "external", tech: "Online card payments" },
+      ],
+    },
+  ]}
+  description="Customers and subscribers use a web storefront for search, wishlists, the cart, checkout, reviews and order tracking. Administrators, staff and, in marketplaces, vendors use an administration area for dashboards, reports, inventory and customer support. Both are built with Blade, JavaScript, jQuery and Bootstrap. They work through REST APIs with authentication and role-based access control on a Laravel application organized into business modules. A commerce core shared across the platforms covers customers, catalog and variants, inventory, cart and checkout, orders, returns and refunds, payments, promotions, and content. Each platform adds what its industry needs, such as variants for fashion, stock-heavy retail, subscriptions and video streaming, or vendor management. Data is stored in MySQL, and payments go through external payment gateways."
+/>
+
+### Engineering decisions
+
+| Decision                                        | Why                                                                                                                 |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| A common commerce core, customized per business | Catalog, orders and payments work much the same everywhere; what differs is the products and the rules around them. |
+| Organize by business module                     | Catalog, inventory, orders, payments and administration change for different reasons and at different times.        |
+| Keep business rules in the backend              | Prices, stock and order states must be decided in one place, whatever the client.                                   |
+| Role-based access control                       | Customers, staff, administrators and vendors see and change different things.                                       |
+| Treat checkout as one consistent operation      | An order, its stock and its payment must succeed or fail together.                                                  |
+
+## Engineering challenges
+
+**Large product catalogs.** Products with categories, brands and variants grow quickly, especially in fashion, where one item can have many sizes and colours. The data model and queries had to keep browsing and administration fast as catalogs grew.
+
+**Search and filtering.** Customers expect search and filters to respond instantly. Search had to be optimized so filtering across categories, brands and attributes stayed quick on large catalogs.
+
+**Inventory synchronization.** Stock has to stay accurate as orders, cancellations and returns happen at the same time. Overselling an item is a customer-facing failure, so stock changes had to be tied closely to order state.
+
+**Order workflows.** An order moves through checkout, payment, fulfilment, tracking and sometimes a return or refund. Each step has rules, and the system had to handle the exceptions, not just the expected path.
+
+**Secure payment processing.** Payment gateway integrations had to confirm payments reliably, apply discounts and coupons correctly, and keep order and payment records consistent even when a payment fails or is interrupted.
+
+**High transaction volumes.** Busy periods put the most load on the parts that matter most: cart, checkout and payment. Database and application performance had to hold up there first.
+
+**Media delivery.** Product images, rich media and, on one platform, premium video had to load quickly, and paid video had to be available only to customers who had bought it.
+
+**Database optimization and scalability.** As products, customers and orders accumulated, I optimized queries and data access so the stores stayed responsive and could keep growing.
+
+**Production support.** These were live stores, where problems cost sales. I investigated and fixed production issues, looking for the cause rather than patching the symptom.
+
+## Business impact
+
+I don't publish internal figures for client work, so the outcomes below are described rather than measured.
+
+- **Digitized commerce operations**, bringing catalog, ordering, payments and administration into one platform for each business.
+- **Support for different industries**, from fashion and grocery to premium digital content and multi-vendor marketplaces, on a common commerce core.
+- **A better customer experience**, with search, filtering, wishlists, reviews, recommendations and order tracking.
+- **Streamlined inventory and order management**, from checkout through to returns and refunds.
+- **Secure online payments**, with discounts, coupons and promotions built in.
+- **A foundation businesses could grow on**, organized by module so new features and industries fit the existing structure.

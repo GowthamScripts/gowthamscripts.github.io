@@ -1,0 +1,133 @@
+{
+  "sample": true,
+  "name": "Gowthaman Thillainathan",
+  "initials": "GT",
+  "role": "Technical Lead",
+  "specialty": "Enterprise Software",
+  "location": "Seattle, WA",
+  "education": [
+    {
+      "qualification": "MSc in Software Engineering",
+      "institution": "ESOFT Metro Campus",
+      "detail": "Software architecture, enterprise application development, system design, software project management and modern software engineering practices."
+    },
+    {
+      "qualification": "Higher Diploma in Science",
+      "institution": "University of Jaffna",
+      "detail": "Foundational studies in computer science, mathematics and software development."
+    },
+    {
+      "qualification": "GCE Advanced Level, Science stream",
+      "institution": "Jaffna Vasavilan Central College"
+    }
+  ],
+  "hero": {
+    "headline": "Building enterprise software that solves real business problems",
+    "subheadline": "Technical Lead with 10+ years designing and delivering enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce, using AI-assisted engineering to ship with quality."
+  },
+  "proof": [
+    {
+      "label": "years of experience",
+      "value": 10,
+      "suffix": "+",
+      "context": "Enterprise software, since 2017"
+    },
+    {
+      "label": "engineers led",
+      "display": "5–7",
+      "context": "As Technical Lead at Apptimus Tech"
+    },
+    {
+      "label": "production releases led",
+      "value": 15,
+      "suffix": "+",
+      "context": "Delivered on schedule with cross-functional teams"
+    },
+    {
+      "label": "industries",
+      "value": 7,
+      "context": "Hospitality, healthcare, travel, transport, finance, education, e-commerce"
+    }
+  ],
+  "bios": {
+    "short": "Technical Lead in Seattle with 10+ years building enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce.",
+    "medium": "I'm a Technical Lead with 10+ years of experience designing and delivering enterprise software, and an MSc in Software Engineering. I've grown from Associate Software Engineer to Technical Lead at Apptimus Tech, where I now lead a team of 5–7 engineers building web and mobile platforms for hospitality, healthcare, travel, transport, finance and education. I focus on solution architecture, AI-assisted engineering and mentoring the engineers I work with."
+  },
+  "principles": [
+    {
+      "title": "Business-driven engineering",
+      "description": "Start from the business problem and the people who have it. Technology choices follow from what the business needs."
+    },
+    {
+      "title": "Architecture with simplicity",
+      "description": "Prefer the simplest design that meets today's needs and can grow with tomorrow's. Complexity has to earn its place."
+    },
+    {
+      "title": "Mentoring through collaboration",
+      "description": "Grow engineers by working alongside them: pairing, design reviews and shared ownership of hard problems."
+    },
+    {
+      "title": "Continuous learning",
+      "description": "Keep learning as the tools change, including putting AI-assisted development and LLM integration to work where they genuinely help."
+    },
+    {
+      "title": "Quality over complexity",
+      "description": "Readable code, sensible tests and clear documentation outlast clever solutions."
+    }
+  ],
+  "values": [
+    {
+      "title": "Ownership",
+      "description": "Take responsibility for outcomes, not just tasks, from design through to production."
+    },
+    {
+      "title": "Clear communication",
+      "description": "Explain trade-offs in plain language to engineers, product owners and stakeholders alike."
+    },
+    {
+      "title": "Respect for users",
+      "description": "Remember that every system serves real people doing real work."
+    },
+    {
+      "title": "Pragmatism",
+      "description": "Choose what works for the team and the business over what's fashionable."
+    }
+  ],
+  "numbers": [
+    {
+      "label": "years of experience",
+      "value": 10,
+      "suffix": "+"
+    },
+    {
+      "label": "engineers led",
+      "display": "5–7"
+    },
+    {
+      "label": "developers mentored",
+      "display": "3–5"
+    },
+    {
+      "label": "production releases led",
+      "value": 15,
+      "suffix": "+"
+    }
+  ],
+  "availability": {
+    "open": true,
+    "label": "Open to Senior Software Engineer, Technical Lead and Staff Engineer roles in Seattle"
+  },
+  "seo": {
+    "description": "Technical Lead in Seattle with 10+ years building enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce."
+  },
+  "lastUpdated": "2026-11-11",
+  "awards": [
+    {
+      "title": "Winner, SLASSCOM National Ingenuity Awards 2024"
+    },
+    {
+      "title": "Winner, Yarl Geek Challenge Season 8",
+      "detail": "Team mAgenda"
+    }
+  ]
+}

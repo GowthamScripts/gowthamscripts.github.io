@@ -1,0 +1,300 @@
+---
+# Real project. Named with permission; no internal figures, user counts or confidential detail.
+title: Multi-Portal Digital Learning Ecosystem
+subtitle: A platform that began as exam preparation for overseas-qualified doctors in Sri Lanka and grew into a multi-tenant ecosystem of twelve web, mobile and desktop applications for learning, exams, communication, payments and commerce.
+company: Moura
+role: Technical Lead
+team: Technical Lead and 3 engineers
+domain: Education technology, medical exam preparation and digital learning
+pillars: [leadership, architecture, domain, business]
+heroMetric:
+  label: Applications on one shared platform
+  display: 12 apps
+  context: Web portals, Flutter apps and an Electron desktop app, joined by one gateway API, one database, one shared package and single sign-on
+tldr:
+  problem: The platform started by helping overseas-qualified doctors prepare for the exams they must pass to practise in Sri Lanka. Once that worked, it had to serve many institutions and many kinds of users, each with different needs, without splitting into disconnected systems.
+  action: As Technical Lead of a team of three engineers, I designed the platform architecture and APIs, built the gateway API, the shared Laravel package, single sign-on, real-time chat and payment workflows, and led planning, reviews and production support.
+  result: A live, multi-tenant digital learning ecosystem in Sri Lanka, where students, doctors, institutions, guardians, sponsors, vendors and authors each have their own applications on one shared backend.
+results:
+  - category: business
+    label: Product scope
+    before: Exam preparation for overseas-qualified doctors
+    after: Multi-tenant learning ecosystem for many institutions
+    change: Expanded
+  - category: business
+    label: User groups
+    before: Doctors preparing for exams
+    after: Students, doctors, institutions, lecturers, guardians, sponsors, vendors, authors and administrators
+    change: Unified on one platform
+  - category: business
+    label: Capabilities
+    before: Study materials, online learning and mock exams
+    after: Learning, exams, library, live classes, chat, payments, store and blog
+    change: Broader platform
+  - category: technical
+    label: Platform foundation
+    before: —
+    after: Gateway API, shared database, shared package and single sign-on
+    change: One source of truth
+technologies:
+  - group: Backend
+    items: [Laravel, PHP, Laravel Sanctum]
+  - group: Frontend
+    items: [Next.js, React, Inertia.js, Redux Toolkit, Tailwind CSS]
+  - group: Mobile
+    items: [Flutter, BLoC]
+  - group: Desktop
+    items: [Electron, React]
+  - group: Database
+    items: [MySQL]
+  - group: Infrastructure
+    items: [DigitalOcean, DigitalOcean Spaces, Bitbucket Pipelines]
+  - group: Integrations
+    items: [Zoom, Ably, PayHere, Apple In-App Purchase, Google Play Billing]
+  - group: AI in engineering
+    items: [Claude Code, ChatGPT, GitHub Copilot]
+takeaways:
+  - title: Technical leadership
+    description: Led a team of three engineers through sprint planning, code reviews, mentoring and production support on a platform of twelve applications.
+  - title: Platform architecture
+    description: Designed a shared foundation of gateway API, database, Laravel package and single sign-on that lets separate applications behave as one system.
+  - title: Hands-on engineering
+    description: Built the gateway API, shared package, single sign-on, real-time chat and payment workflows myself.
+  - title: Product evolution
+    description: Took a focused exam-preparation product and extended it into a multi-tenant ecosystem without starting again for each new user group.
+  - title: Payments and money flows
+    description: Brought cards, bank transfers and app-store purchases into one set of rules for enrollments, commissions and payouts.
+  - title: Security for premium content
+    description: Delivered a cross-platform desktop app that protects paid content and exams.
+  - title: Practical AI adoption
+    description: Used AI tools to speed up engineering while engineers stayed responsible for every decision and change.
+date: "2026-11"
+order: 5
+---
+
+## Overview
+
+This is not a single learning management system. It is a set of twelve applications that together run a digital learning business: learning, exams, a digital library, live classes, communication, payments, a store and administration, for many institutions and many kinds of users.
+
+It combines:
+
+- **Learning:** course management, study resources and a digital library (e-library)
+- **Assessment:** online examinations, mock exams and question banks
+- **Teaching:** live classes, lecturers and institute management
+- **People:** student management, a guardian portal and sponsor management
+- **Commerce:** payments, a vendor portal and a marketplace
+- **Community:** a blog platform, social features, real-time chat and notifications
+- **Operations:** platform administration
+- **Clients:** web portals, Flutter mobile apps and an Electron desktop app
+
+It is live in Sri Lanka and runs on one shared backend.
+
+## Product evolution
+
+### Phase 1: exam preparation for doctors
+
+The platform began with a narrow, well-defined problem. Doctors who complete their medical education outside Sri Lanka must pass professional examinations before they can practise there. They needed somewhere to prepare.
+
+The first product gave them that: digital study materials, online learning, mock examinations and knowledge resources, all in one place.
+
+### Phase 2: a multi-tenant learning ecosystem
+
+That product worked, and the platform grew from it. Instead of serving one audience, it became a multi-tenant ecosystem that many educational institutions run on, with dedicated applications for every group involved in learning: students and doctors, institutions and lecturers, guardians, sponsors, vendors, authors and the platform team.
+
+The capabilities that made the first product work, such as study resources, mock exams and question banks, became part of a much larger platform that also handles live teaching, communication, payments, commerce and administration.
+
+## Who it serves
+
+Each group has its own application, and all of them share one backend.
+
+| User group              | Application                                         |
+| ----------------------- | --------------------------------------------------- |
+| Students and doctors    | Student web app, Flutter mobile app and desktop app |
+| Institutions            | Institute portal                                    |
+| Lecturers               | Institute portal                                    |
+| Guardians               | Guardian portal                                     |
+| Sponsors                | Sponsor portal                                      |
+| Vendors                 | Vendor portal                                       |
+| Authors                 | Blog platform                                       |
+| Platform administrators | Admin portal                                        |
+| Everyone                | Real-time chat on web and mobile                    |
+
+## My role
+
+I was the Technical Lead, leading a team of three engineers, and I did a large share of the engineering myself.
+
+**Leadership**
+
+- Led and mentored the three engineers.
+- Ran sprint planning and made the technical decisions.
+- Reviewed code across the applications.
+- Handled production support.
+
+**Architecture and engineering**
+
+- Designed the platform architecture and the APIs.
+- Built the **gateway API** that every application uses.
+- Built the **shared Laravel package** that holds the business rules every portal must agree on.
+- Implemented **single sign-on** across the portals.
+- Built **real-time chat** for web and mobile.
+- Built the **payment workflows**.
+
+## Platform architecture
+
+The platform is made up of twelve applications:
+
+- **Learners:** the student web app, the Flutter student app and the desktop app.
+- **Portals:** the institute, admin, guardian, sponsor and vendor portals.
+- **Content and communication:** the blog platform, plus chat on web and on Flutter.
+- **Backend:** the gateway that serves them all.
+
+They are separate applications, but they are not separate systems. Four things hold them together:
+
+- **Gateway API:** one API for every client, which also owns the database schema.
+- **Shared MySQL database:** one source of truth for users, courses, enrollments and payments.
+- **Shared Laravel package:** installed in every Laravel portal, it holds single sign-on, memberships, commission rules, enrollment orders, payouts and statements.
+- **Single sign-on:** signed tokens let one person move between portals without signing in again.
+
+<ArchitectureDiagram
+  title="Multi-portal digital learning ecosystem"
+  frame={{ label: "Hosted on DigitalOcean", from: 2 }}
+  layers={[
+    {
+      label: "Who uses it",
+      blocks: [
+        {
+          name: "Learners and families",
+          kind: "users",
+          items: ["Students", "Doctors", "Guardians", "Sponsors"],
+        },
+        {
+          name: "Institutions and the platform",
+          kind: "users",
+          items: ["Institutions", "Lecturers", "Vendors", "Authors", "Platform administrators"],
+        },
+      ],
+    },
+    {
+      label: "Applications",
+      blocks: [
+        {
+          name: "Student and chat web apps",
+          kind: "web",
+          tech: "Next.js · React · Redux Toolkit",
+        },
+        {
+          name: "Student and chat mobile apps",
+          kind: "mobile",
+          tech: "Flutter · BLoC",
+        },
+        {
+          name: "Desktop app",
+          kind: "web",
+          tech: "Electron · React",
+          note: "Protected content and exams on Windows, macOS and Linux",
+        },
+        {
+          name: "Portals",
+          kind: "web",
+          tech: "Laravel · Inertia.js · React",
+          items: ["Institute", "Admin", "Guardian", "Sponsor", "Vendor", "Blog"],
+        },
+      ],
+      link: "Gateway API · single sign-on between portals",
+    },
+    {
+      label: "Shared platform",
+      blocks: [
+        {
+          name: "Gateway API",
+          kind: "app",
+          tech: "Laravel · Sanctum",
+          items: ["Student API", "Payments", "Chat", "Store", "Blog", "Files", "Database schema"],
+        },
+        {
+          name: "Shared Laravel package",
+          kind: "app",
+          tech: "Installed in every Laravel app",
+          items: [
+            "Single sign-on",
+            "Memberships",
+            "Commissions",
+            "Enrollment orders",
+            "Payouts and statements",
+          ],
+        },
+      ],
+    },
+    {
+      label: "Data and integrations",
+      blocks: [
+        { name: "MySQL", kind: "data", tech: "One database for every application" },
+        { name: "DigitalOcean Spaces", kind: "data", tech: "Files and media" },
+        {
+          name: "Payments",
+          kind: "external",
+          tech: "PayHere · Apple In-App Purchase · Google Play Billing",
+        },
+        { name: "Live classes and chat", kind: "external", tech: "Zoom · Ably" },
+      ],
+    },
+  ]}
+  description="Students, doctors, guardians and sponsors, along with institutions, lecturers, vendors, authors and platform administrators, use twelve applications: a Next.js student web app and chat app, Flutter student and chat apps, an Electron desktop app for protected content and exams on Windows, macOS and Linux, and Laravel portals built with Inertia.js and React for institutes, administrators, guardians, sponsors, vendors and the blog. Users move between portals with single sign-on. All clients use a Laravel gateway API that serves students, payments, chat, the store, the blog and files and owns the database schema. A shared Laravel package installed in every Laravel app holds single sign-on, memberships, commissions, enrollment orders, payouts and statements. Every application uses one MySQL database, files live in DigitalOcean Spaces, payments go through PayHere, Apple In-App Purchase and Google Play Billing, live classes use Zoom and chat uses Ably. The platform runs on DigitalOcean."
+/>
+
+### Why this architecture
+
+| Decision                                 | Why                                                                                                                                     |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| A dedicated application for each group   | Institutions, guardians, sponsors, vendors and administrators do very different work. Each gets an interface built for it.              |
+| One gateway API that owns the schema     | Every application works on the same data, so the schema changes in one place and every client sees the same rules.                      |
+| One shared database                      | Users, courses, enrollments and payments have one source of truth instead of copies that drift apart.                                   |
+| A shared package for cross-cutting rules | Sign-on, commissions, enrollments and payouts must behave identically in every portal, so they live in one package rather than in each. |
+| Single sign-on between portals           | One person can be a student, a guardian and a sponsor, and should move between those roles without signing in again.                    |
+| Managed services for video and real-time | Zoom and Ably carry live classes and chat, so the team's time goes into learning, exams and payments.                                   |
+
+## Mobile and desktop
+
+**Flutter mobile apps** are part of the same ecosystem, not separate products. Students study on them and use chat, through the same gateway API and the same rules as the web.
+
+**The desktop app** exists to protect premium content and examinations, which a browser can't do reliably. Built with Electron for Windows, macOS and Linux, it can:
+
+- run full screen in a locked-down kiosk mode
+- block screenshots and screen capture, copy and paste, and right-click
+- add a watermark identifying the user
+- detect virtual machines and watch for other running processes and extra displays
+- notice when the exam window loses focus
+- require camera or screen-recording permission, depending on the protection level of the course or exam
+- log violations for review
+
+## Engineering challenges
+
+**Twelve applications, one backend.** Every client reads and writes the same users, courses, enrollments and payments. Keeping the schema in the gateway, and shared rules in one package, stopped each application from growing its own version of the truth.
+
+**Shared authentication and multi-role users.** One person can be a student, a guardian and a sponsor. Single sign-on and membership resolution let them move between portals and see only what each role allows, without separate accounts.
+
+**Shared business rules.** Commissions, enrollment orders and payouts are used by several portals. Putting them in a shared package meant a rule changed once and behaved the same everywhere.
+
+**Financial transactions and payment integration.** Card payments through PayHere, saved cards, bank transfers, and Apple and Google in-app purchases all have to end in the same enrollment, commission and payout records. Each path had its own callbacks and failure cases, and the result had to be correct every time.
+
+**Real-time communication.** Chat runs on web and Flutter through Ably, so messages and groups had to stay in step across platforms.
+
+**Desktop security across platforms.** Protection has to hold on Windows, macOS and Linux, and each operating system handles permissions differently. On macOS, for example, packaged builds behaved differently from development because the system caches screen-recording permission for the life of the process, which took careful investigation to solve.
+
+**Scalability and maintainability.** New user groups and features kept arriving as the product evolved. Clear separation between applications, with shared rules in one place, let the platform grow without each addition making the rest harder to change.
+
+## AI-assisted engineering
+
+The team used Claude Code, ChatGPT and GitHub Copilot in day-to-day engineering: architecture discussions, code generation, refactoring, debugging, documentation and testing.
+
+AI made us faster. It did not build the platform. Engineers stayed responsible for architecture, implementation, code review, testing and production decisions, and AI-assisted changes went through the same review as any other.
+
+## Business impact
+
+I don't publish internal figures for client work, so the outcomes below are described rather than measured.
+
+- **From a niche product to a platform:** what started as exam preparation for overseas-qualified doctors became a multi-tenant learning ecosystem for many institutions.
+- **One platform for every group:** students, doctors, institutions, lecturers, guardians, sponsors, vendors and authors work on shared data instead of separate systems.
+- **More than learning:** the same platform handles exams, communication, payments, commerce and administration.
+- **Less operational complexity:** institutions run their courses, students, exams and finances through one integrated platform.
+- **Built to keep growing:** the shared gateway, database and package mean new applications and features fit into the existing foundation.

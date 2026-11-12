@@ -1,0 +1,301 @@
+---
+# Real projects, written without client names, internal figures or confidential detail.
+title: Healthcare Platforms
+subtitle: Enterprise platforms for private hospitals in Sri Lanka and a residential elder care provider in the United Kingdom, covering clinical, operational and administrative workflows on web and mobile.
+company: Client names kept confidential
+role: Software Engineer, later Senior Software Engineer
+timeline: Several years, across multiple projects
+team: Engineers, QA and business analysts
+domain: Healthcare, hospital management and residential elder care
+pillars: [domain, architecture, business]
+heroMetric:
+  label: Healthcare platforms in two countries
+  display: Sri Lanka · UK
+  context: Private hospital management and residential elder care, on web and Flutter mobile
+tldr:
+  problem: Private hospitals and a residential care provider ran much of their work on paper and disconnected tools. Patient and resident information, appointments, medication, billing and staff work were spread across departments that needed to share them.
+  action: As a Software Engineer and later Senior Software Engineer, I built backend business logic, REST APIs, MySQL databases, role-based access, web applications and Flutter mobile apps, and implemented the multi-step clinical and care workflows these organizations depend on.
+  result: Integrated web and mobile platforms that run the patient journey in hospitals and the full resident lifecycle in elder care, with less manual work and better coordination between departments and roles.
+results:
+  - category: business
+    label: Hospital operations
+    before: Separate departmental processes
+    after: One platform from appointment to billing
+    change: Integrated
+  - category: business
+    label: Elder care admissions
+    before: Coordinated by hand across roles
+    after: Structured multi-stage workflow with reviews and approvals
+    change: Consistent process
+  - category: business
+    label: Staff away from desks
+    before: Tied to desktop systems
+    after: Flutter apps for day-to-day work
+    change: Mobile access
+  - category: business
+    label: Collaboration across departments
+    before: Information passed manually
+    after: Shared records with role-based access
+    change: Better coordination
+  - category: technical
+    label: Maintainability
+    before: —
+    after: Modular application with shared APIs
+    change: Easier to extend
+technologies:
+  - group: Backend
+    items: [Laravel, PHP]
+  - group: Frontend
+    items: [Blade, JavaScript, jQuery, Bootstrap]
+  - group: Mobile
+    items: [Flutter]
+  - group: Data
+    items: [MySQL]
+  - group: Architecture
+    items: [MVC, REST APIs, Role-based access control, Modular application design]
+takeaways:
+  - title: Healthcare domain depth
+    description: Worked across hospital and residential care operations, where clinical, operational and financial workflows all meet.
+  - title: Workflow-driven engineering
+    description: Built multi-stage processes with states, reviews and approvals that match how care organizations actually work.
+  - title: Data integrity
+    description: Treated patient, medication and billing records as data that has to be right, with validation and transactions to match.
+  - title: Security by role
+    description: Implemented authentication and role-based access for many user groups working on sensitive, shared records.
+  - title: Web and mobile together
+    description: Built the Laravel backend, web applications and Flutter apps against the same APIs and business rules.
+  - title: Production engineering
+    description: Supported live systems, traced issues to the cause and improved performance as data and usage grew.
+  - title: Collaboration
+    description: Worked closely with QA and business analysts to turn healthcare requirements into reliable software.
+date: "2026-11"
+order: 2
+---
+
+## Overview
+
+Over several years at Apptimus Tech, first as a Software Engineer and later as a Senior Software Engineer, I worked on several enterprise healthcare platforms. Two kinds stand out:
+
+| Platform                       | Where          | What it runs                                                              |
+| ------------------------------ | -------------- | ------------------------------------------------------------------------- |
+| Hospital management platforms  | Sri Lanka      | The patient journey in private hospitals, plus administration and finance |
+| Elder care management platform | United Kingdom | The full lifecycle of residents in a residential care home                |
+
+Both replaced manual processes with integrated web applications and Flutter mobile apps. Both are workflow-heavy systems: many roles act on the same records at different stages, and mistakes affect patients, residents and money.
+
+## The business problem
+
+Healthcare organizations depend on information moving reliably between people. A doctor needs the patient's history, the pharmacy needs the prescription, billing needs to know what was done, and management needs to see all of it.
+
+When that information lives on paper or in separate tools, staff spend time re-entering and chasing it, departments work from different versions of the truth, and it becomes hard to see what is happening across the organization.
+
+The aim of these platforms was to centralize patient and care management, digitize the day-to-day workflows, and give each role the information and actions it needs.
+
+## My role
+
+I was a hands-on engineer on these projects, not the lead. My work covered the full stack:
+
+- **Backend:** developed enterprise applications in Laravel (PHP) and designed the backend business logic.
+- **APIs:** built the REST APIs used by the web applications and the Flutter apps.
+- **Data:** designed and optimized MySQL databases.
+- **Security:** implemented authentication and role-based access control.
+- **Web:** built responsive web applications.
+- **Mobile:** developed Flutter mobile applications.
+- **Workflows:** implemented complex, multi-step business workflows.
+- **Production:** troubleshot production issues and optimized performance.
+- **Quality and collaboration:** worked with QA and business analysts, took part in code reviews and delivered production-ready software.
+
+## Hospital management platform
+
+The hospital platform follows the patient through the hospital and supports the administration around them. Its modules are not separate tools; each one picks up where another leaves off.
+
+**From appointment to visit.** Channel management and doctor appointment scheduling decide when and with whom a patient is seen. Patient registration creates the record that every later step uses.
+
+**Clinical care.** The outpatient department (OPD) and inpatient department (IPD) record consultations, admissions and treatment against that record. Electronic medical records (EMR) bring the patient's history together, so clinicians see what happened before.
+
+**Medication.** Prescriptions written during care flow to pharmacy management, so the pharmacy works from what was prescribed.
+
+**Finance and administration.** Billing and accounts collect charges from consultations, treatment and pharmacy. Human resource management handles staff. User and role management decides who can see and do what, and reporting and administration give management a view across the hospital.
+
+Because the modules share patient records and depend on each other's data, a change in one place, such as a prescription or an admission, has to be reflected correctly everywhere it matters.
+
+## Elder care management platform
+
+The UK platform runs a residential care home. It is not a booking system: a resident's journey is a long, structured process that involves different people at each stage.
+
+### Admission
+
+Admission follows a multi-stage workflow:
+
+1. **Initial enquiry** from the prospective resident or their family
+2. **Admission request**
+3. **Resident assessment**
+4. **Care requirement evaluation**
+5. **Room or bed allocation**
+6. **Internal reviews and approvals**
+7. **Contract preparation**
+8. **Resident admission**
+
+Each stage has its own information, owners and conditions for moving on. Internal reviews and approvals have to be completed before contracts are prepared and the resident is admitted.
+
+### Ongoing care
+
+Once a resident is admitted, the platform supports their care day to day:
+
+- **Care plan creation**
+- **Ongoing care management** as needs change
+- **Medication tracking**
+- **Daily care activities**
+- **Staff scheduling**
+- **Family contact management**
+- **Billing**
+- **Reporting**
+
+The workflow connects the different roles involved in a resident's care and keeps family contacts in the same place. Much of the engineering was making sure each of them sees the right state of a resident, can act only where their role allows, and leaves a clear record of what was done.
+
+## Mobile applications
+
+Flutter apps are part of the platform, not a separate project. Healthcare staff are often away from a desk, so the apps let them securely reach the workflows they need during the day. They use the same REST APIs, business rules and role-based access as the web applications, so a record looks and behaves the same on either.
+
+## Architecture
+
+The platforms are Laravel applications built on MVC and organized into modules by business area. Blade, JavaScript, jQuery and Bootstrap power the responsive web interfaces, and the Flutter apps work through REST APIs. MySQL holds the data.
+
+<ArchitectureDiagram
+  title="Shared pattern of the hospital and elder care platforms"
+  layers={[
+    {
+      label: "Who uses it",
+      blocks: [
+        {
+          name: "Hospital",
+          kind: "users",
+          items: [
+            "Clinical staff",
+            "Pharmacy",
+            "Billing and accounts",
+            "HR",
+            "Administrators",
+            "Management",
+          ],
+        },
+        {
+          name: "Residential care home",
+          kind: "users",
+          items: ["Care staff", "Administrators", "Management"],
+        },
+      ],
+    },
+    {
+      label: "Web and mobile",
+      blocks: [
+        {
+          name: "Web applications",
+          kind: "web",
+          tech: "Blade · JavaScript · jQuery · Bootstrap",
+          note: "Responsive, server-rendered through Laravel's MVC.",
+        },
+        {
+          name: "Mobile apps",
+          kind: "mobile",
+          tech: "Flutter",
+          note: "Healthcare staff working away from a desk.",
+        },
+      ],
+      link: "REST APIs · authentication · role-based access control",
+    },
+    {
+      label: "Application (Laravel, organized by business module)",
+      blocks: [
+        {
+          name: "Hospital management",
+          kind: "app",
+          tech: "Sri Lanka",
+          items: [
+            "Channel management",
+            "Appointments",
+            "Patient registration",
+            "EMR",
+            "OPD",
+            "IPD",
+            "Prescriptions",
+            "Pharmacy",
+            "Billing and accounts",
+            "HR",
+            "Users and roles",
+            "Reporting and administration",
+          ],
+        },
+        {
+          name: "Elder care management",
+          kind: "app",
+          tech: "United Kingdom",
+          items: [
+            "Enquiries and admission requests",
+            "Assessment and care requirements",
+            "Room and bed allocation",
+            "Reviews and approvals",
+            "Contracts",
+            "Admission",
+            "Care plans and ongoing care",
+            "Medication tracking",
+            "Daily care activities",
+            "Staff scheduling",
+            "Family contacts",
+            "Billing",
+            "Reporting",
+          ],
+        },
+      ],
+    },
+    {
+      label: "Data",
+      blocks: [
+        {
+          name: "MySQL",
+          kind: "data",
+          tech: "Patient, resident, clinical, care and financial records",
+        },
+      ],
+    },
+  ]}
+  description="The hospital and elder care platforms are separate applications built on the same pattern. Hospital staff, from clinical teams to pharmacy, billing, HR, administrators and management, and care home staff, administrators and management use responsive web applications built with Blade, JavaScript, jQuery and Bootstrap, and Flutter mobile apps for work away from a desk. The apps reach a Laravel application through REST APIs with authentication and role-based access control. The hospital application is organized into modules from channel management and appointments through registration, medical records, outpatient and inpatient care, prescriptions, pharmacy, billing, HR, user management and reporting. The elder care application follows the resident lifecycle, from enquiry and admission through assessment, room allocation, approvals, contracts, care plans, medication, daily care, staff scheduling, family contacts, billing and reporting. Both store their data in MySQL."
+/>
+
+### Engineering decisions
+
+| Decision                                         | Why                                                                                                                    |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Organize the application by business module      | Registration, clinical care, pharmacy, billing and administration change for different reasons and at different times. |
+| Keep business rules in the backend               | The web applications and the Flutter apps must apply the same rules to the same records.                               |
+| Model workflows as explicit stages               | Admission and care processes have defined steps, owners and approvals that the system has to enforce.                  |
+| Role-based access control throughout             | Many roles work with sensitive patient and resident data, each with different rights.                                  |
+| Use database transactions for multi-step changes | Records that span modules, such as a prescription that affects pharmacy and billing, must stay consistent.             |
+
+## Engineering challenges
+
+**Complex healthcare workflows.** Care processes have many steps, owners and conditions, and the outcome of one stage, such as an assessment or a review, shapes what happens next. The workflows had to reflect that faithfully.
+
+**Workflow-driven applications.** Much of the system's behaviour depends on where a record is in its lifecycle. Keeping that state clear and enforced in the backend made the system predictable for users and easier to change.
+
+**Multi-role authorization.** Clinical staff, care staff, pharmacy, billing, administrators and management all touch the same records with different rights. Permissions had to be correct on every screen and every API.
+
+**High data integrity.** Medical records, medication and billing cannot be approximately right. Validation, constraints and transactions were used so that partial or conflicting updates don't reach the data.
+
+**Integration between business modules.** Modules depend on each other's data. Changes had to be made with the whole flow in mind, from appointment to billing or from enquiry to care plan.
+
+**Performance and database optimization.** As records and history grew, I optimized queries and data access so day-to-day screens stayed responsive.
+
+**Production support.** These systems are used throughout the day. I investigated and fixed production issues, looking for the cause rather than patching the symptom.
+
+## Business impact
+
+I don't publish internal figures for client work, so the outcomes below are described rather than measured.
+
+- **Digitized hospital workflows**, from appointments and registration through clinical care, pharmacy and billing.
+- **Centralized operations**, so patient and resident information lives in one place instead of across paper and separate tools.
+- **Better collaboration across departments**, with shared records and access based on role.
+- **Support for staff away from their desks** through Flutter apps on the same platform as the web applications.
+- **Less manual work** in admissions, care management, medication tracking and billing.
+- **More efficient operations**, with structured workflows that make the next step and its owner clear.
+- **A foundation that can grow**, organized by module and built on shared APIs, so new features fit into the existing structure.

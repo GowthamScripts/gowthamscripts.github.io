@@ -1,0 +1,26 @@
+{
+  "story": [
+    {
+      "title": "Background",
+      "body": "I hold an MSc in Software Engineering from ESOFT Metro Campus, after a Higher Diploma in Science at the University of Jaffna."
+    },
+    {
+      "title": "Growing as an engineer",
+      "body": "I joined Apptimus Tech as an Associate Software Engineer in 2017 and grew through Software Engineer and Senior Software Engineer to Technical Lead in 2024. Along the way I built web and mobile platforms with Laravel, React, Next.js, Flutter and PostgreSQL, designed RESTful APIs and database architectures, and integrated payment, authentication, mapping and cloud services."
+    },
+    {
+      "title": "Leading today",
+      "body": "As Technical Lead I lead a team of 5–7 engineers and mentor 3–5 developers, own solution architecture and system design, and have led 15+ production releases. I work closely with business stakeholders across hospitality, healthcare, travel, transport, finance and education, and I drive the team's adoption of AI-assisted development and LLM integration."
+    },
+    {
+      "title": "Recognition",
+      "body": "Winner of the SLASSCOM National Ingenuity Awards 2024, and of Yarl Geek Challenge Season 8 with Team mAgenda."
+    },
+    {
+      "title": "What's next",
+      "body": "I'm based in the Seattle area and looking for Senior Software Engineer, Technical Lead or Staff Engineer roles."
+    }
+  ],
+  "howIWork": [],
+  "beyondWork": []
+}

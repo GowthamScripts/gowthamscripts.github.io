@@ -1,0 +1,133 @@
+{
+  "capabilities": [
+    {
+      "name": "Technical leadership",
+      "proof": "Lead a team of 5–7 engineers and mentor 3–5 developers; led 15+ production releases.",
+      "evidence": [
+        {
+          "label": "Career timeline",
+          "href": "/experience"
+        }
+      ]
+    },
+    {
+      "name": "Solution architecture & system design",
+      "proof": "Drive solution architecture, system design and technical decisions for scalable, secure, maintainable enterprise applications.",
+      "evidence": [
+        {
+          "label": "Domain expertise",
+          "href": "/domain"
+        },
+        {
+          "label": "WorkSphere",
+          "href": "/open-source#worksphere"
+        }
+      ]
+    },
+    {
+      "name": "AI engineering",
+      "proof": "Lead the adoption of AI-assisted development, LLM integration, prompt engineering and AI-powered engineering workflows.",
+      "evidence": [
+        {
+          "label": "Technical Lead role",
+          "href": "/experience#technical-lead"
+        }
+      ]
+    },
+    {
+      "name": "Full-stack development",
+      "proof": "Web and mobile platforms with Laravel, Node.js, React, Next.js and Flutter, backed by PostgreSQL and RESTful APIs.",
+      "evidence": [
+        {
+          "label": "Senior Software Engineer role",
+          "href": "/experience#senior-software-engineer"
+        }
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "skill": "Team leadership",
+      "evidence": "Lead a team of 5–7 software engineers delivering enterprise web and mobile solutions."
+    },
+    {
+      "skill": "Mentoring",
+      "evidence": "Mentor 3–5 developers through coaching, architecture guidance, code reviews and knowledge-sharing."
+    },
+    {
+      "skill": "Stakeholder collaboration",
+      "evidence": "Translate complex business requirements into scalable technical solutions with business stakeholders."
+    }
+  ],
+  "architecture": [
+    {
+      "area": "Solution architecture",
+      "patterns": ["System design", "Design patterns", "Modular architecture"]
+    },
+    {
+      "area": "Backend & APIs",
+      "patterns": ["RESTful APIs", "Microservices", "WebSockets", "Authentication"]
+    },
+    {
+      "area": "Data",
+      "patterns": ["Database design", "Query optimization", "PostgreSQL", "MySQL"]
+    }
+  ],
+  "delivery": [
+    {
+      "practice": "Release management",
+      "evidence": "Led 15+ production releases, coordinating cross-functional teams."
+    },
+    {
+      "practice": "Engineering standards",
+      "evidence": "Established engineering standards, code quality practices and technical governance."
+    },
+    {
+      "practice": "Agile delivery",
+      "evidence": "Scrum, with product owners, UI/UX designers, QA engineers and business analysts."
+    }
+  ],
+  "technologies": [
+    {
+      "category": "Languages",
+      "primary": ["PHP", "Dart", "JavaScript", "TypeScript", "SQL", "HTML5", "CSS3"],
+      "familiar": []
+    },
+    {
+      "category": "Frontend",
+      "primary": ["React.js", "Next.js", "Flutter", "Responsive web design"],
+      "familiar": []
+    },
+    {
+      "category": "Backend",
+      "primary": ["Laravel", "Node.js", "REST APIs", "Microservices", "WebSockets"],
+      "familiar": []
+    },
+    {
+      "category": "Mobile",
+      "primary": ["Flutter", "Android", "iOS", "Cross-platform"],
+      "familiar": []
+    },
+    {
+      "category": "AI & automation",
+      "primary": ["Generative AI", "Prompt engineering", "LLM integration", "MCP", "AI automation"],
+      "familiar": []
+    },
+    {
+      "category": "Cloud & DevOps",
+      "primary": ["AWS", "Docker", "CI/CD", "Git", "GitHub", "Bitbucket", "Firebase"],
+      "familiar": []
+    },
+    {
+      "category": "Databases",
+      "primary": ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
+      "familiar": []
+    },
+    {
+      "category": "Tools",
+      "primary": ["Visual Studio Code", "Android Studio", "Postman", "Figma"],
+      "familiar": []
+    }
+  ],
+  "growing": []
+}

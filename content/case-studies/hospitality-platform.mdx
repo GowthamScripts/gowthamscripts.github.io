@@ -1,0 +1,310 @@
+---
+# Real project, written without client names, internal figures or confidential detail.
+title: Hospitality & Destination Management Platform
+subtitle: An enterprise B2B and B2C platform that replaced a legacy system and now runs the whole operation of a hospitality and tourism business, from hotel contracts to what guides sell on tour.
+company: Name kept confidential
+role: Technical Lead
+timeline: About 8 months
+team: 5–7 engineers
+stakeholders: Business stakeholders
+domain: Hospitality, tourism and travel technology
+pillars: [leadership, architecture, business, domain]
+heroMetric:
+  label: To deliver the platform
+  display: ~8 months
+  context: Five portals, one modular backend, AI-assisted engineering with human review
+tldr:
+  problem: The business ran on a legacy application and a lot of manual work. Hotels, tours, transport, bookings, partners and on-trip sales lived in different places, and growth meant more people doing the same repetitive tasks.
+  action: As Technical Lead, I designed the architecture, data model and APIs for a modular monolith covering the whole operation, led a team of 5–7 engineers through delivery, and introduced AI both inside the product and across our engineering workflow.
+  result: One platform with portals for hotels, travel agents, customers, staff and administrators, delivered in about eight months, with less manual work and a codebase the team can keep extending.
+results:
+  - category: business
+    label: Day-to-day operations
+    before: Legacy application plus manual processes
+    after: Hotels, tours, transport, bookings and marketplace in one platform
+    change: Unified
+  - category: business
+    label: Partner onboarding
+    before: Hotel profiles and rates entered by hand
+    after: OTA import and AI-assisted extraction, reviewed by staff
+    change: Faster onboarding
+  - category: business
+    label: Partner and customer access
+    before: Legacy application
+    after: Dedicated portals for each user group
+    change: Better collaboration
+  - category: business
+    label: On-trip sales
+    before: Handled manually, outside the system
+    after: Marketplace module for guides and staff
+    change: Managed in the platform
+  - category: technical
+    label: Maintainability
+    before: Legacy application, hard to change
+    after: Modular monolith with clear boundaries
+    change: Easier to extend
+technologies:
+  - group: Backend
+    items: [Laravel, Python AI services]
+  - group: Frontend
+    items: [Next.js, React]
+  - group: Mobile
+    items: [Flutter]
+  - group: Data
+    items: [MySQL, Microsoft SQL Server]
+  - group: Architecture
+    items: [Modular monolith, REST APIs, Role-based access control, Event-driven integrations]
+  - group: AI in the product
+    items: [OpenAI API]
+  - group: AI in engineering
+    items: [ChatGPT, Claude Code, GitHub Copilot]
+  - group: Infrastructure
+    items: [Microsoft Azure]
+takeaways:
+  - title: Technical leadership
+    description: Owned the architecture, technical decisions and delivery plan, and was accountable for the platform in production.
+  - title: Enterprise architecture
+    description: Chose a modular monolith with explicit module boundaries, shared APIs and role-based access over a distributed design the team didn't need.
+  - title: Product and domain thinking
+    description: Turned hotel contracting, tour operations, transport and on-trip sales into a coherent domain model the business recognizes.
+  - title: Practical AI adoption
+    description: Used AI where it removes repetitive work, in the product and in the engineering process, with people accountable for every output.
+  - title: Delivery at pace
+    description: Shipped a platform of this size in about eight months without giving up code review, testing or standards.
+  - title: Team leadership
+    description: Led and mentored 5–7 engineers and kept quality consistent across a large codebase.
+  - title: Cross-functional collaboration
+    description: Worked directly with business stakeholders to decide what to build, in what order, and why.
+date: "2026-11"
+featured: true
+order: 1
+---
+
+## Overview
+
+This is the system a hospitality and tourism business uses to run itself. It replaced a legacy application and brought the whole operation into one platform: contracting and managing hotels, building and selling tours, running transport and field staff, handling bookings, and selling products to guests during trips.
+
+It is both B2B and B2C. Hotels and travel agents work in it as partners, customers book through it, and internal teams use it to run daily operations. Drivers, tour guides, internal staff and customers also use Flutter mobile apps. Five portals sit on one shared backend:
+
+| Portal                    | Used by        |
+| ------------------------- | -------------- |
+| Hotel portal (B2B)        | Hotels         |
+| Travel agent portal (B2B) | Travel agents  |
+| Customer portal (B2C)     | Customers      |
+| Internal staff portal     | Internal staff |
+| Administration portal     | Administrators |
+
+## The business problem
+
+The legacy system stored data but did little to help people work. Most of the operation depended on manual steps: entering hotel rates from documents in many formats, keeping fact sheets and availability current, matching drivers and guides to tours, and coordinating partners.
+
+That had three effects the business felt directly. Staff time went into data entry rather than customers and partners. Data quality depended on who entered it. And every new hotel, agent or tour added more of the same work, so growth was tied to headcount.
+
+The goal was not to rebuild the old application with a new interface. It was to model how the business actually operates and put all of it in one place.
+
+## My role
+
+I was the Technical Lead, responsible for the architecture, the delivery and the team.
+
+- **Architecture:** designed the overall architecture, defined the module boundaries, and designed the data model and APIs.
+- **Technical decisions:** led the key decisions and trade-offs, including where AI belonged in the product and where it didn't.
+- **Business translation:** worked closely with business stakeholders to understand their processes and turn them into software.
+- **Delivery:** planned releases, ran sprint execution and balanced engineering decisions against business priorities.
+- **Team:** led 5–7 engineers, mentored developers and reviewed code.
+- **Production:** owned production issues and made sure fixes addressed the cause.
+- **AI adoption:** introduced AI into both the platform and the team's engineering workflow.
+
+## What the platform covers
+
+### Hotels and inventory
+
+Hotel profiles with facilities, amenities, images and room categories. Alongside them sit the commercial records: rate sheets, fact sheets, seasonal pricing and availability. This is the data everything else depends on, so it had to be accurate and easy to keep current.
+
+### Tours, packages and itineraries
+
+Ready-made packages, custom tours planned around a customer's request, and the day-by-day itineraries that connect hotels, activities and transport.
+
+### Transport and field operations
+
+Driver management, guide management and vehicle allocation, so each tour has the right people and vehicles assigned.
+
+### Bookings and customers
+
+Booking management and customer records, shared across the portals that need them.
+
+### Marketplace
+
+During trips, tour guides and staff sell products and services to guests. The marketplace brings those sales into the platform, so they are part of the same business records as the trip itself instead of being tracked by hand outside any system.
+
+### Partners and access
+
+Partner management for hotels, travel agents, guides and administrators, with each group seeing only what its role allows.
+
+## Architecture
+
+The platform is a **modular monolith**: one deployable Laravel application divided into modules for hotels, tours, transport, bookings, customers, partners and the marketplace. Next.js and React power the web portals, and Flutter the mobile apps used by drivers, guides, internal staff and customers. All of them use the same REST APIs.
+
+<ArchitectureDiagram
+  title="Hospitality & destination management platform"
+  frame={{ label: "Hosted on Microsoft Azure", from: 2 }}
+  layers={[
+    {
+      label: "Who uses it",
+      blocks: [
+        {
+          name: "Partners and customers",
+          kind: "users",
+          items: ["Hotels", "Travel agents", "Customers"],
+        },
+        {
+          name: "Internal teams",
+          kind: "users",
+          items: ["Internal staff", "Administrators", "Drivers", "Tour guides"],
+        },
+      ],
+    },
+    {
+      label: "Portals and apps",
+      blocks: [
+        {
+          name: "Web portals",
+          kind: "web",
+          tech: "Next.js · React",
+          items: [
+            "Hotel portal (B2B)",
+            "Travel agent portal (B2B)",
+            "Customer portal (B2C)",
+            "Internal staff portal",
+            "Administration portal",
+          ],
+        },
+        {
+          name: "Mobile apps",
+          kind: "mobile",
+          tech: "Flutter",
+          items: ["Drivers", "Guides", "Internal staff", "Customers"],
+        },
+      ],
+      link: "REST APIs · role-based access control",
+    },
+    {
+      label: "Platform",
+      blocks: [
+        {
+          name: "Modular monolith",
+          kind: "app",
+          tech: "Laravel",
+          items: [
+            "Hotels and inventory",
+            "Rates, seasons and availability",
+            "Tours, packages and itineraries",
+            "Transport and field operations",
+            "Bookings and customers",
+            "Marketplace",
+            "Partners and access",
+          ],
+          note: "One deployable application. Event-driven integrations where they fit.",
+        },
+        {
+          name: "AI services",
+          kind: "ai",
+          tech: "Python",
+          items: [
+            "Document understanding",
+            "OTA hotel import",
+            "Allocation suggestions",
+            "Fraud monitoring",
+            "Assistants",
+            "Recommendations",
+          ],
+          note: "Every business output is reviewed by a person before it is used.",
+        },
+      ],
+    },
+    {
+      label: "Data and external services",
+      blocks: [
+        { name: "MySQL", kind: "data", tech: "New modules" },
+        { name: "Microsoft SQL Server", kind: "data", tech: "Data from the legacy system" },
+        { name: "OpenAI API", kind: "external", tech: "Used by the AI services" },
+        { name: "OTA sources", kind: "external", tech: "Hotel content for onboarding" },
+      ],
+    },
+  ]}
+  description="Hotels, travel agents and customers, along with internal staff, administrators, drivers and tour guides, use five Next.js and React web portals and Flutter mobile apps. All of them call one set of REST APIs, protected by role-based access control. Behind the APIs is a Laravel modular monolith with modules for hotels and inventory, rates and availability, tours and itineraries, transport, bookings and customers, the marketplace, and partners. Next to it, Python AI services handle document understanding, OTA hotel import, allocation suggestions, fraud monitoring, assistants and recommendations, using the OpenAI API, and every AI output is reviewed by a person. New modules store data in MySQL, legacy data stays in Microsoft SQL Server, and the platform runs on Microsoft Azure."
+/>
+
+### Key decisions
+
+| Decision                                    | Why                                                                                                                             | Trade-off                                                                                                                                            |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modular monolith instead of microservices   | A team of 5–7 engineers working on a closely connected domain gets clear ownership without running and debugging many services. | Module boundaries have to be enforced through design and review, not network calls. Modules can be extracted later if one needs to scale on its own. |
+| One API layer for every portal and app      | Five portals and the mobile apps share the same business rules, so they behave consistently.                                    | The API has to serve very different users, which puts more weight on API design and permissions.                                                     |
+| Role-based access control in the core model | Seven user groups work with overlapping data and different rights.                                                              | Permissions are part of every feature's design, which takes discipline but avoids bolting security on later.                                         |
+| AI in separate Python services              | AI work evolves quickly and has different dependencies from the core platform.                                                  | One more component to deploy and monitor, kept small by limiting it to AI workloads.                                                                 |
+| Event-driven integrations where they fit    | Integrations that don't need an immediate answer shouldn't hold up the user.                                                    | Used selectively; most of the platform stays simple request-and-response.                                                                            |
+
+New modules store their data in MySQL, while data from the legacy system stays in Microsoft SQL Server. The platform runs on Microsoft Azure.
+
+## AI in the platform
+
+AI is one capability across the platform, not the product. It is used where it takes repetitive work off people, through Python AI services and the OpenAI API.
+
+- **Document understanding:** reads hotel rate sheets and fact sheets in different formats and turns them into structured rates, seasons and hotel details.
+- **OTA hotel import:** brings in descriptions, facilities, amenities, images and room information from online travel agency sources as a starting point for onboarding.
+- **Allocation suggestions:** suggests drivers and guides for a tour based on its requirements.
+- **Fraud and scam monitoring:** flags unusual or suspicious activity for the operations team.
+- **Assistants:** chat assistants in the portals and help with operational workflows.
+- **Recommendations:** suggestions that help users make decisions faster.
+
+> **The rule we kept:** AI drafts, people decide. Every AI-generated business output, whether extracted rates, imported hotel data or an allocation, is reviewed by a person before it is published or used in operations.
+
+## How we delivered it in about eight months
+
+The team used AI across the whole engineering lifecycle, with ChatGPT, Claude Code, GitHub Copilot and the OpenAI API. It helped with requirements analysis, architecture discussions, database and API design, code generation, refactoring, debugging, unit tests, documentation, code reviews and performance work.
+
+AI made the team faster. It did not build the platform. Architecture, engineering judgment, code quality, testing, security and production readiness stayed with the engineers, and every AI-assisted change went through the same review as any other.
+
+Speed came from a combination of things:
+
+- AI-assisted engineering, with human validation at every step
+- A modular architecture that let engineers work in parallel without stepping on each other
+- Clear standards, so code looked and behaved the same across modules
+- Planning that kept the most valuable work first
+- Continuous code review
+- Close, regular collaboration with the business
+
+## Engineering challenges
+
+**A large, connected domain.** Rates depend on seasons and availability; tours depend on hotels, transport and guides; bookings and marketplace sales depend on all of it. Keeping that understandable meant clear module boundaries and a shared vocabulary with the business.
+
+**Many roles on shared data.** Hotels, agents, customers, drivers, guides, staff and administrators often look at the same records with different rights. Access control had to be correct everywhere.
+
+**Replacing a system the business depends on.** The new platform had to take over from the legacy application without disrupting daily operations.
+
+**Using AI responsibly.** AI output can be wrong. Review steps were designed into the workflows so mistakes are caught before they reach prices, partners or customers.
+
+**Moving fast without losing quality.** An eight-month timeline puts pressure on shortcuts. Standards, reviews and testing were not negotiable, including for AI-assisted code.
+
+**Performance, scale and maintainability.** Hotel content, pricing, bookings and users grow with the business. Data access, API design and module structure had to hold up as volume and the feature set grew.
+
+## How I led
+
+- **Set the technical direction:** architecture, module boundaries, data model and API design, and the decisions behind them.
+- **Connected engineering to the business:** worked with stakeholders to understand how operations really run, then turned that into features, priorities and releases.
+- **Brought AI in deliberately:** into the product where it removes repetitive work, and into the team's workflow where it speeds up engineering, with clear rules on human review.
+- **Kept quality high at speed:** set engineering standards, reviewed code and made sure testing and security weren't traded for pace.
+- **Grew the team:** mentored developers through reviews and design discussions so they could own larger parts of the system.
+- **Owned delivery and production:** planned releases, ran sprints, adjusted scope with the business and handled production issues through to the root cause.
+
+## Business impact
+
+I don't publish internal figures for client work, so the outcomes below are described rather than measured.
+
+- **One operational platform** replaced a legacy system and manual processes, covering hotels, tours, transport, bookings, partners and the marketplace.
+- **Faster onboarding** for hotels, using OTA imports and AI-assisted extraction with staff review.
+- **Less manual work** across rate and fact sheet entry, allocations and day-to-day operations.
+- **Better collaboration** with dedicated portals for hotels, travel agents, customers, staff and administrators.
+- **Marketplace sales** by guides and staff, once tracked by hand, are now part of the business's own records.
+- **A platform built to grow:** modular, maintainable and ready for new features and partners.
+- **A faster engineering team** through an AI-assisted workflow with human review built in.
