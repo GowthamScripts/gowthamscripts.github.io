@@ -72,9 +72,11 @@ export function ArchitectureDiagram({
             >
               {frameStart && <p className="mb-3 font-mono text-xs text-primary">{frame.label}</p>}
               <section aria-label={layer.label}>
-                <h4 className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                {/* Not a heading: the diagram sits under headings of different levels, and the
+                    section is already labelled for assistive technology. */}
+                <p className="mb-2 text-xs font-medium tracking-wide text-muted-foreground uppercase">
                   {layer.label}
-                </h4>
+                </p>
                 <ul className="grid gap-3 sm:grid-cols-2">
                   {layer.blocks.map((block) => (
                     <BlockCard key={block.name} block={block} single={layer.blocks.length === 1} />
