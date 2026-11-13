@@ -12,10 +12,12 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_SITE_URL: https://gowthamscripts.github.io
     steps:
       - uses: actions/checkout@v5
+      # The site address comes from the repository, so this workflow works in any user's
+      # <name>.github.io repository.
+      - name: Set the site address
+        run: echo "NEXT_PUBLIC_SITE_URL=https://${GITHUB_REPOSITORY_OWNER,,}.github.io" >> "$GITHUB_ENV"
       - uses: actions/setup-node@v5
         with:
           node-version: lts/*
