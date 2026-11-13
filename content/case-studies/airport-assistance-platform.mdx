@@ -1,0 +1,244 @@
+---
+# Real project, written from the business requirements document and confirmed details. Pilot stage;
+# no internal figures, SLA values or client detail.
+title: Airport Accessibility Assistance Platform
+subtitle: A platform for UK airports that connects passengers who need wheelchair or other assistance with the service providers and ambassadors who help them, from booking to boarding, with real-time messaging, live location and service-level tracking.
+company: empower
+role: Technical Lead
+team: Technical Lead and engineering team
+stakeholders: Passengers, service providers, airport ambassadors, airport authorities and platform administrators
+domain: Aviation, accessibility and passenger assistance
+pillars: [leadership, architecture, domain]
+heroMetric:
+  label: Apps and portals on one platform
+  display: 6 modules
+  context: Passenger web and mobile apps, an ambassador mobile app, and portals for service providers, airports and administrators
+tldr:
+  problem: Passengers with reduced mobility depend on assistance at the airport, but bookings, staff and communication were spread across manual processes and separate channels, and airports had little view of how well the service was delivered.
+  action: As Technical Lead, I led the engineering of a microservices platform with Laravel and Spring services, React web portals and Flutter mobile apps, real-time updates through Ably and live location on Google Maps.
+  result: A platform, now in pilot, where passengers who need wheelchair or other help can book it, reach the staff assisting them and follow every step of their airport journey.
+results:
+  - category: business
+    label: Booking assistance
+    before: Manual processes and separate channels
+    after: Passengers book and track assistance in a web or mobile app
+    change: Digitized
+  - category: business
+    label: Reaching staff
+    before: Separate channels between passenger, provider and airport
+    after: Messaging, live location and a call button to the assigned ambassador
+    change: Direct contact
+  - category: business
+    label: Service levels
+    before: —
+    after: Requests tracked against service-level targets, with KPI dashboards for airports
+    change: Measurable
+  - category: technical
+    label: Platform
+    before: —
+    after: Microservices with web and mobile apps for five user groups
+    change: In pilot
+technologies:
+  - group: Backend
+    items: [Microservices, Laravel, Spring]
+  - group: Frontend
+    items: [React]
+  - group: Mobile
+    items: [Flutter]
+  - group: Data
+    items: [MySQL, NoSQL]
+  - group: Infrastructure
+    items: [DigitalOcean]
+  - group: Integrations
+    items: [Ably, Google Maps]
+takeaways:
+  - title: Technical leadership
+    description: Led the engineering of a platform of six modules across web and mobile, from requirements to pilot.
+  - title: Distributed architecture
+    description: Built on microservices in Laravel and Spring, serving React portals and Flutter apps.
+  - title: Real-time systems
+    description: Messaging, live location and instant alerts between passengers and the staff assisting them.
+  - title: Aviation domain
+    description: Modelled departure, arrival and transit journeys, standard assistance types and airport service levels.
+  - title: Accessibility first
+    description: Designed for passengers with reduced mobility, including accessibility settings in the passenger app itself.
+  - title: Privacy and compliance
+    description: GDPR consent and account deletion, OTP verification and an audit trail of user activity.
+date: "2026-11"
+order: 2
+---
+
+## Overview
+
+empower is a platform for UK airports that helps passengers with reduced mobility get the assistance they need, whether that is a wheelchair, someone to guide them, or other support through the airport.
+
+It brings everyone involved into one system. Passengers book assistance and follow their journey. Service providers receive and assign the requests. Ambassadors, the staff who help passengers in the terminal, see their tasks in a mobile app. Airport authorities track how well the service is delivered.
+
+The platform is in pilot. I was the Technical Lead.
+
+## The problem
+
+Assistance for passengers with reduced mobility depends on several organisations working together: the passenger, the company providing the assistance, its staff on the ground and the airport. Bookings, staff and communication were spread across manual processes and separate channels.
+
+For a passenger in a wheelchair, that can mean not knowing who is coming to help or when. For the airport, it means little visibility of waiting times or whether service targets are met.
+
+## Who it serves
+
+| User                    | What they do on the platform                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| Passengers              | Book assistance, follow their journey, message and call their ambassador, rate the service |
+| Service providers       | Receive and assign requests, manage ambassadors and equipment, watch service levels        |
+| Ambassadors             | See assigned requests, update each step of the journey, stay in touch with the passenger   |
+| Airport authorities     | Track performance and KPIs, manage terminals, pick-up areas and equipment                  |
+| Platform administrators | Set up airports and service providers, manage users, roles and website content             |
+
+## Six modules
+
+1. **Public website**, with a content management system for the blog, FAQs and testimonials, and the privacy, GDPR and cookie policies.
+2. **Passenger app**, on the web, Android and iOS.
+3. **Service provider portal**, on the web.
+4. **Ambassador app**, on Android and iOS.
+5. **Airport portal**, on the web, for analytics and airport information.
+6. **Internal management portal**, on the web, for platform administrators.
+
+## The passenger journey
+
+A passenger books assistance by choosing an assistance type, using the standard aviation codes for wheelchair and other help, then saying whether they need an ambassador or an assistive device, and selecting their flight. A journey with a connection can be booked as several legs at once.
+
+Each request then moves through milestones that match what actually happens at the airport. These differ by journey:
+
+- **Departure:** from confirmation and arrival at the airport, through check-in, baggage drop, security and the boarding gate, to boarding.
+- **Arrival:** from the flight landing, through disembarking, baggage claim and customs, to leaving the airport.
+- **Transit:** from arriving at the airport, through security and the transit gate, to the connecting flight.
+
+Passengers, ambassadors and service providers update the same request as it moves along. Some details lock once a step has passed: the flight can't be changed after booking, for example, and the arrival time can't be edited after pickup.
+
+## Staying in touch on the day
+
+The platform's main purpose is to let passengers who need help reach the people helping them.
+
+- **Messaging** between the passenger, the ambassador and the service provider, which closes a set time after the service is complete.
+- **Live location**, shared both ways between passenger and ambassador on Google Maps, and switched off automatically when the service ends.
+- **A call button** that alerts the assigned ambassador straight away.
+- **A shareable journey link**, so family can follow where the passenger and ambassador are and each step they reach.
+- **Notifications** for booking confirmations, reminders and flight or gate changes.
+
+## Running the service
+
+Service providers get the tools to deliver assistance on the day:
+
+- Requests listed and filtered by status and urgency, with flight schedules to see the demand coming.
+- Ambassadors and equipment, such as wheelchairs, assigned to each request.
+- Ambassador availability and breaks, with shifts brought in from the provider's own HR system.
+- An inventory of wheelchairs and other equipment, including repairs.
+- Requests created on a passenger's behalf when they arrive without booking or call a hotline.
+- One login across several airports.
+
+## Service levels and analytics
+
+Every request is tracked against service-level targets. Departure, arrival and transit requests are listed separately and colour-coded green, amber or red by how long the passenger has been waiting, with different targets for pre-booked and unbooked passengers.
+
+Airports get KPI dashboards for departure wait time, arrival wait time and transit time, alongside service ratings, complaint resolution and equipment availability.
+
+## Platform architecture
+
+empower is built as microservices in Laravel and Spring. React powers the web portals and Flutter the passenger and ambassador apps. Data is stored in MySQL and a NoSQL database, real-time updates go through Ably, and maps and location use Google Maps. It runs on DigitalOcean.
+
+<ArchitectureDiagram
+  title="empower platform"
+  frame={{ label: "Hosted on DigitalOcean", from: 2 }}
+  layers={[
+    {
+      label: "Who uses it",
+      blocks: [
+        {
+          name: "Passengers",
+          kind: "users",
+          items: ["Wheelchair users", "Others needing assistance"],
+        },
+        {
+          name: "Staff and organisations",
+          kind: "users",
+          items: ["Ambassadors", "Service providers", "Airport authorities", "Administrators"],
+        },
+      ],
+    },
+    {
+      label: "Apps and portals",
+      blocks: [
+        {
+          name: "Mobile apps",
+          kind: "mobile",
+          tech: "Flutter · Android and iOS",
+          items: ["Passenger app", "Ambassador app"],
+        },
+        {
+          name: "Web portals",
+          kind: "web",
+          tech: "React",
+          items: [
+            "Public website",
+            "Passenger web app",
+            "Service provider portal",
+            "Airport portal",
+            "Internal management",
+          ],
+        },
+      ],
+      link: "APIs · role-based access control",
+    },
+    {
+      label: "Platform",
+      blocks: [
+        {
+          name: "Microservices",
+          kind: "app",
+          tech: "Laravel · Spring",
+          items: [
+            "Assistance requests and journeys",
+            "Assignment and equipment",
+            "Messaging and alerts",
+            "Notifications",
+            "Service levels and analytics",
+            "Users, roles and audit",
+            "Website content",
+          ],
+          note: "What the platform covers, not how it is split into services.",
+          wide: true,
+        },
+      ],
+    },
+    {
+      label: "Data and external services",
+      blocks: [
+        { name: "MySQL and NoSQL", kind: "data", tech: "Platform data" },
+        { name: "Ably", kind: "external", tech: "Real-time updates" },
+        { name: "Google Maps", kind: "external", tech: "Maps and live location" },
+        { name: "Service provider HR systems", kind: "external", tech: "Ambassador shifts" },
+      ],
+    },
+  ]}
+  description="Passengers, including wheelchair users and others who need assistance, use Flutter mobile apps for Android and iOS or a React web app. Ambassadors use a Flutter mobile app. Service providers, airport authorities and administrators use React web portals, alongside a public website. The apps and portals reach the platform through APIs with role-based access control. The platform is built as microservices in Laravel and Spring, covering assistance requests and journeys, assignment and equipment, messaging and alerts, notifications, service levels and analytics, users, roles and audit, and website content. It is hosted on DigitalOcean. Data is stored in MySQL and a NoSQL database. Ably carries real-time updates, Google Maps provides maps and live location, and ambassador shifts come from the service providers' HR systems."
+/>
+
+## Engineering challenges
+
+**One request, many hands.** A single assistance request is updated by the passenger, the service provider and the ambassador, across departure, arrival and transit journeys with many steps each. The rules for who can change what, and when, had to hold for every step.
+
+**Real time, and only for as long as needed.** Messages, live location and call alerts have to arrive instantly while a passenger is being helped, and stop once the service is complete, so a passenger's location isn't shared longer than needed.
+
+**Many organisations on one platform.** Several airports and service providers use the same system, and each should see only its own requests, staff and equipment, while service providers can still work across more than one airport.
+
+**Measuring service honestly.** Service-level tracking depends on accurate timestamps for every step, on different targets for pre-booked and unbooked passengers, and on recording delays caused by the passenger separately from delays in the service.
+
+**Accessible by design.** The people using the passenger app are the ones most likely to need accessibility support, so the app includes its own settings for font size, colours and magnification.
+
+**Privacy.** The platform holds personal and travel details for people who may have disabilities. It needed GDPR consent and account deletion, OTP verification for sign-up and for changing a phone number or email, and an audit trail of user activity.
+
+## My role
+
+As Technical Lead, I led the engineering of the platform across its six modules, working from the business requirements through to the pilot.
+
+## Where it stands
+
+empower is in pilot at UK airports. Its purpose is simple: a passenger in a wheelchair, or anyone who needs help getting through the airport, can reach the staff assisting them, know who is coming and where they are, and get through the airport with confidence.
