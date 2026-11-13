@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   // A fully static site, published to GitHub Pages. Each route is written as folder/index.html.
   output: "export",
   trailingSlash: true,
+  // A static host has no image optimizer; images in /public are already sized and compressed.
+  images: { unoptimized: true },
   turbopack: {
     // Pin the project root so a stray lockfile in a parent folder is not picked up.
     root: import.meta.dirname,
