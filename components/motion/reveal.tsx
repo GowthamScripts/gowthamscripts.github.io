@@ -1,40 +1,24 @@
-"use client";
-
-import { useRef } from "react";
-import { useInViewOnce } from "@/lib/hooks/use-in-view";
 import { cn } from "@/lib/utils";
 
 /**
- * Fade + rise once when 15% visible (docs/09-ux.md A6).
- * CSS transitions and an IntersectionObserver, so no animation library ships with every page.
- * `data-reveal` lets the <noscript> rule in the root layout, and the reduced-motion rule in
- * globals.css, show content straight away.
+ * Fade + rise as the content scrolls into view (docs/09-ux.md A6).
+ *
+ * Pure CSS, driven by the scroll position (`animation-timeline: view()`, see `.reveal` in
+ * globals.css). Content is never left hidden waiting for a script: browsers without scroll-driven
+ * animations, readers who prefer reduced motion, print and full-page screenshots all get it
+ * fully visible. `data-reveal` lets the print and no-JavaScript rules find it.
  */
 export function Reveal({
   children,
-  delay = 0,
   className,
 }: {
   children: React.ReactNode;
-  /** Seconds. */
+  /** Kept for existing callers; scroll position, not time, now orders the reveal. */
   delay?: number;
   className?: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const shown = useInViewOnce(ref, 0.15);
-
   return (
-    <div
-      ref={ref}
-      data-reveal
-      data-shown={shown || undefined}
-      style={{ transitionDelay: shown && delay ? `${delay}s` : undefined }}
-      className={cn(
-        "transition-[opacity,translate] duration-[280ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-        shown ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0",
-        className,
-      )}
-    >
+    <div data-reveal className={cn("reveal", className)}>
       {children}
     </div>
   );

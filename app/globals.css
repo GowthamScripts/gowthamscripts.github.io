@@ -186,8 +186,7 @@ html[data-skim="on"] [data-skim-grid] {
   }
   /* Scroll-in sections the reader never reached must still print. */
   [data-reveal] {
-    opacity: 1 !important;
-    translate: none !important;
+    animation: none !important;
   }
 }
 
@@ -233,6 +232,18 @@ html[data-skim="on"] [data-skim-grid] {
 @utility animate-rise {
   animation: rise-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: calc(var(--i, 0) * 70ms);
+}
+/* Scroll-in sections (components/motion/reveal.tsx). The animation follows the scroll position,
+   so content is visible wherever the reader is, including above the screen after a jump.
+   Browsers without scroll-driven animations simply show it. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
 }
 /* Reveals a line chart from left to right. */
 @utility animate-wipe {

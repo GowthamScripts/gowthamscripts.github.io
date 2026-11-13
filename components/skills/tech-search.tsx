@@ -38,7 +38,7 @@ export function TechSearch({
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search technologies, e.g. Kafka"
+          placeholder="Search technologies, e.g. Laravel"
           aria-label="Search technologies"
           className="h-11 pl-9"
         />
@@ -76,9 +76,11 @@ export function TechSearch({
           </div>
         ))}
       </dl>
-      <p className="mt-3 text-xs text-muted-foreground">
-        Solid border: used daily, in depth. Dashed: shipped with it.
-      </p>
+      {groups.some((group) => group.familiar.length > 0) && (
+        <p className="mt-3 text-xs text-muted-foreground">
+          Solid border: used daily, in depth. Dashed: shipped with it.
+        </p>
+      )}
 
       {matches.length > 0 && (
         <div className="mt-6 rounded-xl border bg-card p-5">

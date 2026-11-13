@@ -131,10 +131,6 @@ export default function Page() {
         </Section>
       )}
 
-      <p className="mt-4 rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
-        More open-source work will be added here as it is published.
-      </p>
-
       {upstream.length > 0 && (
         <Section title="Upstream contributions">
           {/* A table on desktop; each project becomes a stacked card on phones. */}

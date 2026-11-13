@@ -57,7 +57,7 @@ export const pages: SitePage[] = [
     label: "Domain",
     title: "Domain Expertise",
     description:
-      "Business fluency: how the domain works, its hard problems, and the metrics I've moved.",
+      "The industries I've built software for, and the technical specialties behind that work.",
     goal: "Show business fluency in the domain.",
     sections: [
       "How the domain works",
@@ -83,7 +83,7 @@ export const pages: SitePage[] = [
     href: "/open-source",
     label: "Open Source",
     title: "Open Source",
-    description: "Projects, upstream contributions, writing, and community work.",
+    description: "Software I design and build in the open.",
     goal: "Show influence without authority, in public.",
     sections: [
       "Impact strip",
@@ -125,7 +125,7 @@ export const pages: SitePage[] = [
     href: "/contact",
     label: "Contact",
     title: "Contact",
-    description: "Email, book an intro call, or send a message.",
+    description: "Email me or send a message.",
     goal: "Turn interest into a conversation.",
     sections: ["Quick actions", "Contact form", "What I'm looking for", "Elsewhere"],
     source: "docs/07-contact.md",

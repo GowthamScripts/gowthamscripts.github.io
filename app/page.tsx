@@ -1,4 +1,5 @@
-import { ArrowRight, ArrowUpRight, Download, Plus } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download } from "lucide-react";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 import { CaseStudyCard } from "@/components/shared/case-study-card";
@@ -214,7 +215,7 @@ export default function Home() {
           title="Open source"
           link={{ href: "/open-source", label: "All projects" }}
         />
-        <ul className="mt-6 grid gap-4 lg:grid-cols-[2fr_1fr]">
+        <ul className={cn("mt-6 grid gap-4", projects.length > 1 && "lg:grid-cols-2")}>
           {projects.map((project) => (
             <li key={project.slug}>
               <Reveal className="h-full">
@@ -251,27 +252,6 @@ export default function Home() {
               </Reveal>
             </li>
           ))}
-          <li>
-            <Reveal delay={stagger} className="h-full">
-              <div className="flex h-full flex-col items-start justify-center gap-3 rounded-xl border border-dashed p-6 sm:p-8">
-                <span className="grid size-10 place-items-center rounded-full bg-secondary">
-                  <Plus className="size-5 text-muted-foreground" aria-hidden />
-                </span>
-                <h3 className="font-semibold">More open-source work</h3>
-                <p className="text-sm text-muted-foreground">
-                  New projects will appear here as they are published.
-                </p>
-                <a
-                  href={contact.links.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-primary hover:underline"
-                >
-                  Follow on GitHub ↗<span className="sr-only"> (opens in a new tab)</span>
-                </a>
-              </div>
-            </Reveal>
-          </li>
         </ul>
       </section>
 

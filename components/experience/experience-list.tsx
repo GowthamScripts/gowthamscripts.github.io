@@ -15,8 +15,6 @@ import { cn } from "@/lib/utils";
 type AchievementTag = (typeof achievementTags)[number];
 type Props = { roles: Experience[]; caseStudyTitles: Record<string, string> };
 
-const filterOptions = achievementTags.map((tag) => ({ value: tag, label: achievementLabels[tag] }));
-
 /** Reads the filter from the address bar (?focus=LEAD,ARCH). */
 export function FilteredExperience(props: Props) {
   const [active, toggle] = useUrlList("focus", achievementTags);
@@ -41,6 +39,10 @@ function ExperienceList({
   );
 
   const anyAchievements = roles.some((role) => role.achievements.length > 0);
+  // Only offer filters that match at least one achievement.
+  const filterOptions = achievementTags
+    .filter((tag) => roles.some((role) => role.achievements.some((a) => a.tag === tag)))
+    .map((tag) => ({ value: tag, label: achievementLabels[tag] }));
 
   return (
     <>
