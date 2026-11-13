@@ -16,7 +16,9 @@ export function useInViewOnce(ref: React.RefObject<Element | null>, amount = 0.1
           observer.disconnect();
         }
       },
-      { threshold: amount },
+      // The root reaches far above the screen, so content the reader has already passed counts
+      // as seen. A jump to a lower section then leaves nothing above it invisible.
+      { threshold: amount, rootMargin: "100000px 0px 0px 0px" },
     );
     observer.observe(node);
     return () => observer.disconnect();
