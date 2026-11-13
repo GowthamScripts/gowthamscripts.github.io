@@ -44,3 +44,6 @@ next-env.d.ts
 
 # lighthouse reports
 .lighthouseci
+
+# planning notes, kept local only
+/docs/

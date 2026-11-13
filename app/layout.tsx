@@ -27,7 +27,7 @@ const profile = getProfile();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — ${profile.role} · ${profile.specialty} · Seattle`,
+    default: `${profile.name} — ${profile.role} · ${profile.specialty} · ${profile.location}`,
     template: `%s — ${profile.name}`,
   },
   description: profile.seo.description,

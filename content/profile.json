@@ -1,10 +1,9 @@
 {
-  "sample": true,
   "name": "Gowthaman Thillainathan",
   "initials": "GT",
   "role": "Technical Lead",
   "specialty": "Enterprise Software",
-  "location": "Seattle, WA",
+  "location": "Seattle, Washington",
   "education": [
     {
       "qualification": "MSc in Software Engineering",
@@ -23,12 +22,12 @@
   ],
   "hero": {
     "headline": "Building enterprise software that solves real business problems",
-    "subheadline": "Technical Lead with 10+ years designing and delivering enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce, using AI-assisted engineering to ship with quality."
+    "subheadline": "Technical Lead with 9+ years designing and delivering enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce, using AI-assisted engineering to ship with quality."
   },
   "proof": [
     {
       "label": "years of experience",
-      "value": 10,
+      "value": 9,
       "suffix": "+",
       "context": "Enterprise software, since 2017"
     },
@@ -50,8 +49,8 @@
     }
   ],
   "bios": {
-    "short": "Technical Lead in Seattle with 10+ years building enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce.",
-    "medium": "I'm a Technical Lead with 10+ years of experience designing and delivering enterprise software, and an MSc in Software Engineering. I've grown from Associate Software Engineer to Technical Lead at Apptimus Tech, where I now lead a team of 5–7 engineers building web and mobile platforms for hospitality, healthcare, travel, transport, finance and education. I focus on solution architecture, AI-assisted engineering and mentoring the engineers I work with."
+    "short": "Technical Lead in Seattle, Washington, with 9+ years building enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce.",
+    "medium": "I'm a Technical Lead with 9+ years of experience designing and delivering enterprise software, and an MSc in Software Engineering. I've grown from Associate Software Engineer to Technical Lead at Apptimus Tech, where I now lead a team of 5–7 engineers building web and mobile platforms for hospitality, travel, transport, finance and education. I focus on solution architecture, AI-assisted engineering and mentoring the engineers I work with."
   },
   "principles": [
     {
@@ -96,7 +95,7 @@
   "numbers": [
     {
       "label": "years of experience",
-      "value": 10,
+      "value": 9,
       "suffix": "+"
     },
     {
@@ -115,10 +114,10 @@
   ],
   "availability": {
     "open": true,
-    "label": "Open to Senior Software Engineer, Technical Lead and Staff Engineer roles in Seattle"
+    "label": "Open to Senior Software Engineer, Technical Lead and Staff Engineer roles in Seattle, Washington"
   },
   "seo": {
-    "description": "Technical Lead in Seattle with 10+ years building enterprise software for hospitality, healthcare, travel, transport, finance, education and e-commerce."
+    "description": "Technical Lead in Seattle, Washington, with 9+ years building enterprise software for hospitality, healthcare, travel, finance, e-commerce and more."
   },
   "lastUpdated": "2026-11-11",
   "awards": [

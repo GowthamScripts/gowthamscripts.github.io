@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export function GET() {
   const profile = getProfile();
   return renderShareImage({
-    eyebrow: `${profile.role} · ${profile.specialty} · Seattle`,
+    eyebrow: `${profile.role} · ${profile.specialty} · ${profile.location}`,
     title: profile.name,
     subtitle: profile.hero.headline,
   });

@@ -68,7 +68,7 @@ export default function Home() {
           className="animate-rise font-mono text-xs tracking-widest text-primary uppercase"
           style={{ "--i": 0 } as React.CSSProperties}
         >
-          {profile.role} · {profile.specialty} · Seattle
+          {profile.role} · {profile.specialty} · {profile.location}
         </p>
         <h1 className="mt-5 text-4xl font-semibold tracking-tight text-balance sm:text-6xl sm:leading-[1.05]">
           {/* Each word is its own box so the line can wrap anywhere on narrow screens;
